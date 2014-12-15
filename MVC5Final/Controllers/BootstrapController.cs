@@ -13,5 +13,10 @@ namespace MVC5Final.Controllers
         {
             return View();
         }
+
+        public ActionResult gettingstarted()
+        {
+            return View();
+        }
     }
 }
