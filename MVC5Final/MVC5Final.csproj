@@ -177,6 +177,12 @@
     <Content Include="assets\brand\bootstrap-punchout.svg" />
     <Content Include="assets\brand\bootstrap-solid.svg" />
     <Content Include="assets\css\docs.min.css" />
+    <Content Include="assets\css\MyCSSBundle.css">
+      <DependentUpon>MyCSSBundle.css.bundle</DependentUpon>
+    </Content>
+    <Content Include="assets\css\MyCSSBundle.min.css">
+      <DependentUpon>MyCSSBundle.css</DependentUpon>
+    </Content>
     <Content Include="assets\css\src\docs.css" />
     <Content Include="assets\css\src\pygments-manni.css" />
     <Content Include="assets\flash\ZeroClipboard.swf" />
@@ -208,6 +214,12 @@
     <Content Include="dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="dist\js\bootstrap.js" />
     <Content Include="dist\js\bootstrap.min.js" />
+    <Content Include="dist\js\MyJSBundle.js">
+      <DependentUpon>MyJSBundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="dist\js\MyJSBundle.min.js">
+      <DependentUpon>MyJSBundle.js</DependentUpon>
+    </Content>
     <Content Include="dist\js\npm.js" />
     <Content Include="examples\blog\blog.css" />
     <Content Include="examples\blog\index.html" />
@@ -279,6 +291,11 @@
     <Content Include="dist\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="dist\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\css\MyCSSBundle.css.bundle" />
+    <Content Include="dist\js\MyJSBundle.js.bundle" />
+    <Content Include="dist\js\MyJSBundle.min.js.map">
+      <DependentUpon>MyJSBundle.min.js</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.11.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.1.js" />
     <Content Include="Scripts\jquery-1.11.1.min.js" />
