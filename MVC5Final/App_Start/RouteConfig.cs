@@ -14,6 +14,12 @@ namespace MVC5Final
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "gettingstarted",
+                url: "gettingstarted",
+                defaults: new { controller = "Bootstrap", action = "gettingstarted" }
+                );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Bootstrap", action = "Index", id = UrlParameter.Optional }
