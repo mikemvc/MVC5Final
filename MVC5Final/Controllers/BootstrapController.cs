@@ -19,7 +19,8 @@ namespace MVC5Final.Controllers
         {
             return View();
         }
-        
+
+        [OutputCache(Duration = 60, VaryByParam = "sitename")]
         public ActionResult Examples(string sitename)
         {
             if (string.IsNullOrEmpty(sitename)) sitename = "starter-template";
