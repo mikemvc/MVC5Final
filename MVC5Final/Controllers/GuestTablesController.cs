@@ -15,7 +15,7 @@ namespace MVC5Final.Controllers
     {
         private MVC5FinalContext db = new MVC5FinalContext();
 
-        // GET: GuestTables
+        // GET: GuestTables 
         public ActionResult Index()
         {
             return View(db.GuestTable.ToList());
