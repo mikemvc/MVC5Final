@@ -185,6 +185,10 @@
     <Compile Include="Migrations\201412191536172_GuestTable.Designer.cs">
       <DependentUpon>201412191536172_GuestTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412191612194_Email.cs" />
+    <Compile Include="Migrations\201412191612194_Email.Designer.cs">
+      <DependentUpon>201412191612194_Email.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\C__MigrationHistory.cs" />
@@ -399,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412191536172_GuestTable.resx">
       <DependentUpon>201412191536172_GuestTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412191612194_Email.resx">
+      <DependentUpon>201412191612194_Email.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
