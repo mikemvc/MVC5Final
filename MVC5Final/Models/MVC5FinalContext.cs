@@ -12,5 +12,6 @@ namespace MVC5Final.Models
        
         
         public DbSet<SystemLog> SystemLog { get; set; }
+        public DbSet<GuestTable> GuestTable { get; set; }
     }
 }

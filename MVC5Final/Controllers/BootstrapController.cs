@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC5Final.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,12 @@ namespace MVC5Final.Controllers
         {
             return View();
         }
+
+        private MVC5FinalContext db = new MVC5FinalContext();
         [Authorize]
         public ActionResult gettingstarted()
         {
-            return View();
+            return View(db.GuestTable.ToList());
         }
 
         [OutputCache(Duration = 60, VaryByParam = "sitename")]
