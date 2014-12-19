@@ -18,7 +18,25 @@
             @Html.DisplayNameFor(model => model.Content)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.PostDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MimeType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FContent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.approval)
         </th>
         <th></th>
     </tr>
@@ -32,7 +50,25 @@
             @Html.DisplayFor(modelItem => item.Content)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.PostDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MimeType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FContent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.approval)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

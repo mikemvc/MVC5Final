@@ -10,6 +10,7 @@ using MVC5Final.Models;
 
 namespace MVC5Final.Controllers
 {
+    [Authorize(Users="test@com.tw")]
     public class GuestTablesController : Controller
     {
         private MVC5FinalContext db = new MVC5FinalContext();
@@ -46,7 +47,7 @@ namespace MVC5Final.Controllers
         // 詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Subject,Content,PostDateTime")] GuestTable guestTable)
+        public ActionResult Create([Bind(Include = "Id,Subject,Content,Email,PostDateTime,Name,Size,MimeType,FContent,approval")] GuestTable guestTable)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +79,7 @@ namespace MVC5Final.Controllers
         // 詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Subject,Content,PostDateTime")] GuestTable guestTable)
+        public ActionResult Edit([Bind(Include = "Id,Subject,Content,Email,PostDateTime,Name,Size,MimeType,FContent,approval")] GuestTable guestTable)
         {
             if (ModelState.IsValid)
             {
