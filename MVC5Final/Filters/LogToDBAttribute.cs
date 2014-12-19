@@ -13,25 +13,45 @@ namespace MVC5Final.Filters
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            log("OnActionExecuting", filterContext.RouteData);
+            if (filterContext.HttpContext.User.Identity.IsAuthenticated)
+            {
+                SystemLog logdata = new SystemLog();
+                logdata.UserName = filterContext.HttpContext.User.Identity.Name;
+                log("OnActionExecuting", filterContext.RouteData, logdata);
+            }
         }
 
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            log("OnActionExecuted", filterContext.RouteData);
+            if (filterContext.HttpContext.User.Identity.IsAuthenticated)
+            {
+                SystemLog logdata = new SystemLog();
+                logdata.UserName = filterContext.HttpContext.User.Identity.Name;
+                log("OnActionExecuted", filterContext.RouteData, logdata);
+            }
         }
 
         public override void OnResultExecuting(ResultExecutingContext filterContext)
         {
-            log("OnResultExecuting", filterContext.RouteData);
+            if (filterContext.HttpContext.User.Identity.IsAuthenticated)
+            {
+                SystemLog logdata = new SystemLog();
+                logdata.UserName = filterContext.HttpContext.User.Identity.Name;
+                log("OnResultExecuting", filterContext.RouteData, logdata);
+            }
         }
 
         public override void OnResultExecuted(ResultExecutedContext filterContext)
         {
-            log("OnResultExecuted", filterContext.RouteData);
+            if (filterContext.HttpContext.User.Identity.IsAuthenticated)
+            {
+                SystemLog logdata = new SystemLog();
+                logdata.UserName = filterContext.HttpContext.User.Identity.Name;
+                log("OnResultExecuted", filterContext.RouteData, logdata);
+            }
         }
 
-        private void log(string method, RouteData routeData)
+        private void log(string method, RouteData routeData, SystemLog log)
         {
             var controller = routeData.Values["controller"];
             var action = routeData.Values["action"];
@@ -41,13 +61,13 @@ namespace MVC5Final.Filters
             
             MVC5FinalDB db = new MVC5FinalDB();
             
-            SystemLog log = new SystemLog();
             log.ActionName = action.ToString();
             log.ControllerName = controller.ToString();
-            log.UserName = "mike";
             log.IPAddress = "10.10.10.1";
             log.CreatedDate = DateTime.Now;
             log.Method = method;
+
+
 
             db.SystemLogs.Add(log);
             db.SaveChanges();
