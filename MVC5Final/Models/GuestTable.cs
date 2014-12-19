@@ -15,7 +15,10 @@ namespace MVC5Final.Models
         // 新增 Email
         [Required]
         [EmailAddress]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         public DateTime PostDateTime { get; set; }
+        // 加入檔案上傳
+
     }
 }
