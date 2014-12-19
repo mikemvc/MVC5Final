@@ -14,7 +14,7 @@ namespace MVC5Final.Controllers
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult gettingstarted()
         {
             return View();
