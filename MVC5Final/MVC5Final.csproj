@@ -193,14 +193,17 @@
     <Compile Include="Migrations\201412191622563_Email1.Designer.cs">
       <DependentUpon>201412191622563_Email1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201412191632499_DbFile.cs" />
-    <Compile Include="Migrations\201412191632499_DbFile.Designer.cs">
-      <DependentUpon>201412191632499_DbFile.cs</DependentUpon>
+    <Compile Include="Migrations\201412191655091_GTandDB.cs" />
+    <Compile Include="Migrations\201412191655091_GTandDB.Designer.cs">
+      <DependentUpon>201412191655091_GTandDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412191656242_approval.cs" />
+    <Compile Include="Migrations\201412191656242_approval.Designer.cs">
+      <DependentUpon>201412191656242_approval.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\C__MigrationHistory.cs" />
-    <Compile Include="Models\DbFile.cs" />
     <Compile Include="Models\GuestTable.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -419,8 +422,11 @@
     <EmbeddedResource Include="Migrations\201412191622563_Email1.resx">
       <DependentUpon>201412191622563_Email1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201412191632499_DbFile.resx">
-      <DependentUpon>201412191632499_DbFile.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201412191655091_GTandDB.resx">
+      <DependentUpon>201412191655091_GTandDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412191656242_approval.resx">
+      <DependentUpon>201412191656242_approval.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

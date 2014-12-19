@@ -7,13 +7,13 @@ namespace MVC5Final.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.1-30610")]
-    public sealed partial class DbFile : IMigrationMetadata
+    public sealed partial class GTandDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(DbFile));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(GTandDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201412191632499_DbFile"; }
+            get { return "201412191655091_GTandDB"; }
         }
         
         string IMigrationMetadata.Source
